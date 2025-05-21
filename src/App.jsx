@@ -1,8 +1,5 @@
 import './App.css'
 import { useState } from 'react'
-import ReactRouterDOM from 'react-router-dom'
-
-const { Routes, Route } = ReactRouterDOM
 import Ctg from './Ctg'
 
 function App() {
@@ -10,9 +7,10 @@ function App() {
 
   return (
     <>
-      <Routes>
+      <Ctg />
+      {/* <Routes>
         <Route path='/:id' element={<Ctg />} />
-      </Routes>
+      </Routes> */}
     </>
   )
 }

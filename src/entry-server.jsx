@@ -1,9 +1,5 @@
 import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
-import ReactRouterDOM from 'react-router-dom'
-
-const { StaticRouter } = ReactRouterDOM
-// for react-router-dom v6
 import { Helmet } from 'react-helmet'
 import App from './App'
 
@@ -13,14 +9,14 @@ import App from './App'
 export function render(url) {
   const html = renderToString(
     <StrictMode>
-      <StaticRouter location={url}>
-        <App />
-      </StaticRouter>
+      <App />
     </StrictMode>
   )
-
+  
+  // Collect helmet tags after render
   const helmet = Helmet.renderStatic()
 
+  // Prepare head tags string
   const head = `
     ${helmet.title.toString()}
     ${helmet.meta.toString()}

@@ -5,5 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   
   plugins: [react()],
-  
+  ssr: {
+    noExternal: ['react-router-dom'] // try bundling react-router-dom for SSR
+  },
+  resolve: {
+    alias: {
+      // Sometimes helps if Vite misresolves
+      'react-router-dom/server': 'react-router-dom/server'
+    }
+  }
 })
