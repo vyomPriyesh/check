@@ -1,22 +1,20 @@
-import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
+import { StaticRouter } from 'react-router-dom/server'
+import { StrictMode } from 'react'
 import { Helmet } from 'react-helmet'
 import App from './App'
 
-/**
- * @param {string} url
- */
 export function render(url) {
   const html = renderToString(
     <StrictMode>
-      <App />
+      <StaticRouter location={url}>
+        <App />
+      </StaticRouter>
     </StrictMode>
   )
-  
-  // Collect helmet tags after render
+
   const helmet = Helmet.renderStatic()
 
-  // Prepare head tags string
   const head = `
     ${helmet.title.toString()}
     ${helmet.meta.toString()}

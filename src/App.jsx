@@ -1,16 +1,12 @@
-import './App.css'
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Ctg from './Ctg'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Ctg />
-      {/* <Routes>
-        <Route path='/:id' element={<Ctg />} />
-      </Routes> */}
+      <Routes>
+        <Route path="/:id" element={<Ctg />} />
+      </Routes>
     </>
   )
 }
