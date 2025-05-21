@@ -18,7 +18,6 @@ export function render(url) {
   console.log(helmet)
 
   const head = `
-    ${helmet.title.toString()}
     ${helmet.meta.toString()}
     ${helmet.link.toString()}
     ${helmet.script.toString()}

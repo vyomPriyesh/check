@@ -33,10 +33,17 @@ const Ctg = () => {
     return (
         <div>
             <Helmet>
-                <title>{title}</title>
+                {/* <title>{title}</title> */}
                 {/* <meta name="description" content={desc} /> */}
-                <meta property="og:image" content={image} />
-                <meta name="image" content={`https://img.youtube.com/vi/${image}/hqdefault.jpg`} />
+                <meta name="title" content={title} id="metatitle" />
+                {/* <meta name="description" content="" id="metadescription" /> */}
+                <meta name="image" content={`https://img.youtube.com/vi/${image}/hqdefault.jpg`} id="metaimage" />
+                {/* <meta name="url" content="" id="metaurl" /> */}
+
+                <meta property="og:title" content={title} id="og-title" />
+                {/* <meta property="og:description" content="" id="og-description" /> */}
+                <meta property="og:image" content={`https://img.youtube.com/vi/${image}/hqdefault.jpg`} id="og-image" />
+                {/* <meta property="og:url" content="" id="og-url" /> */}
             </Helmet>
 
             <h1>{title}</h1>
