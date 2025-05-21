@@ -1,15 +1,13 @@
+// App.jsx
 import { Routes, Route } from 'react-router-dom'
 import Ctg from './Ctg'
+import Home from './Home'
 
-function App() {
+export default function App({ initialData }) {
   return (
-    <>
-    <h1>hello2</h1>
-      <Routes>
-        <Route path="/:id" element={<Ctg />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/product/:id" element={<Ctg ssrData={initialData} />} />
+    </Routes>
   )
 }
-
-export default App
