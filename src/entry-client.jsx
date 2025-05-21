@@ -5,9 +5,9 @@ import App from './App'
 
 hydrateRoot(
   document.getElementById('root'),
-  <StrictMode>
+  // <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>
+  // </StrictMode>
 )

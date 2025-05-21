@@ -4,7 +4,7 @@ import Ctg from './Ctg'
 function App() {
   return (
     <>
-    <h1>hello</h1>
+    <h1>hello2</h1>
       <Routes>
         <Route path="/:id" element={<Ctg />} />
       </Routes>

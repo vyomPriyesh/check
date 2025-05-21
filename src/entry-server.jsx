@@ -6,14 +6,16 @@ import App from './App'
 
 export function render(url) {
   const html = renderToString(
-    <StrictMode>
+    // <StrictMode>
       <StaticRouter location={url}>
         <App />
       </StaticRouter>
-    </StrictMode>
+    // </StrictMode>
   )
 
   const helmet = Helmet.renderStatic()
+
+  console.log(helmet)
 
   const head = `
     ${helmet.title.toString()}

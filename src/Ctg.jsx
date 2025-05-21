@@ -17,13 +17,19 @@ const Ctg = () => {
                 setTitle(response.data.data.title)
                 setImage(response.data.data.blog_image[0].details)
                 // setDesc(response.data.data.description)  // Set description too
+                // document.querySelector('meta[property="og:title"]').setAttribute("content", response.data.title);
+                // document.querySelector('meta[property="og:description"]').setAttribute("content", typeof response.data.description === 'string' ? response.data.description.replace(/(<([^>]+)>)/gi, '') : '');
+                // document.querySelector('meta[property="og:image"]').setAttribute("content", `https://img.youtube.com/vi/${response.data.data.blog_image[0].details}/sddefault.jpg`);
+                // document.querySelector('meta[property="og:url"]').setAttribute("content", `${protocol}//${host}${port ? `:${port}` : ''}/?nid=${list?.id}`);
+
+                // document.querySelector('meta[name="title"]').setAttribute("content", response.data.title);
             } catch (err) {
                 console.log(err)
             }
         }
         getData()
     }, [])
-    
+
     return (
         <div>
             <Helmet>
