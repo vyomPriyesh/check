@@ -65,8 +65,6 @@ app.use('*all', async (req, res) => {
   }
 })
 
-app.use(express.json());
-
 // Start http server
 app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`)
